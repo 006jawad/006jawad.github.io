@@ -1,0 +1,208 @@
+/*
+ * Custom styles for the portfolio clone. The goal is to emulate the clean,
+ * spacious look of the al‑folio theme without copying its code verbatim.
+ */
+
+/* Base typography and colors */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #212529;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout containers */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Fixed navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #212529;
+  text-decoration: none;
+}
+.navbar-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.navbar-nav li {
+  display: inline-block;
+}
+.navbar-nav li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 400;
+}
+.navbar-nav li a:hover,
+.navbar-nav li.active a {
+  text-decoration: underline;
+}
+
+/* Generic grid columns */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+.col-md-4,
+.col-md-8 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.col-md-4 {
+  flex: 0 0 33.333%;
+  max-width: 33.333%;
+}
+.col-md-8 {
+  flex: 0 0 66.667%;
+  max-width: 66.667%;
+}
+
+/* Typography */
+.post-title {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+.desc {
+  font-style: italic;
+  color: #6c757d;
+}
+
+/* Spacing utilities */
+.mt-5 {
+  margin-top: 3rem;
+}
+.pt-5 {
+  padding-top: 3rem;
+}
+.my-4 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.mb-3 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+/* Image helpers */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+.rounded {
+  border-radius: 0.25rem;
+}
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Timeline styling for news and education sections */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.timeline li {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #dee2e6;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0.3rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: #17a2b8;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e9ecef;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Adjust top padding to account for fixed navbar */
+.mt-5.pt-5 {
+  padding-top: 4rem !important;
+}
+
+/* Publication list styling */
+.publication-list {
+  padding-left: 1rem;
+}
+.publication-list li {
+  margin-bottom: 1rem;
+}
+
+/* Timeline styling for news and education sections */
+.timeline li {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid #dee2e6;
+}
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 0.45rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #17a2b8;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #ffffff;
+}
+
+/* Navbar brand font weight */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Highlight active nav item */
+.navbar-nav .nav-item.active .nav-link {
+  font-weight: 500;
+}
+
+/* Ensure images scale nicely */
+img {
+  max-width: 100%;
+  height: auto;
+}
