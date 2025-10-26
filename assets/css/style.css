@@ -206,3 +206,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Override timeline bullets completely */
+ul.timeline,
+.timeline {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+.timeline li::before {
+  content: none !important;
+  display: none !important;
+}
