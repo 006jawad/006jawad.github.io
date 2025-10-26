@@ -227,3 +227,12 @@ ul.timeline li::before,
   background: none !important;
   border: 0 !important;
 }
+
+/* Profile image styling */
+.profile-pic {
+  width: 220px;         /* Resize to a clean width */
+  height: auto;
+  border-radius: 8px;   /* Rounded corners */
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
