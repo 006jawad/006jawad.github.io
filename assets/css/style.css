@@ -207,15 +207,23 @@ img {
   height: auto;
 }
 
-/* Override timeline bullets completely */
-ul.timeline,
-.timeline {
+/* —— Remove timeline dots; keep only the vertical line —— */
+.timeline,
+ul.timeline {
   list-style: none !important;
   padding-left: 0 !important;
   margin-left: 0 !important;
 }
 
-.timeline li::before {
+/* Kill any pseudo-dot implementations */
+.timeline li::before,
+.timeline .timeline-item::before,
+ul.timeline li::before,
+.timeline li::marker {
   content: none !important;
   display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  background: none !important;
+  border: 0 !important;
 }
