@@ -16,12 +16,14 @@
       .navbar .nav { list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center; }
       .navbar .nav a { text-decoration:none; color:inherit; opacity:0.85; }
       .navbar .nav a.active { opacity:1; font-weight:600; text-decoration:underline; }
-      .navbar button#themeToggle { border:none; background:none; cursor:pointer; font-size:1.05rem; }
+      .navbar button#themeToggle { border:none; background:none; cursor:pointer; font-size:1.15rem; }
       .timeline { padding-left:0; }
       .timeline .timeline-item { margin:0 0 1rem 0; }
       .timeline .timeline-date { font-weight:600; margin-right:.35rem; white-space:nowrap; }
       .footer { color:#6c757d; }
       body.dark-mode a { color:#9ec5ff; }
+      /* Highlight red line */
+      .highlight-red { color:#d9534f; font-weight:600; }
     </style>
   </head>
   <body>
@@ -34,7 +36,7 @@
           <li><a href="index.html" class="nav-link active">about</a></li>
           <li><a href="publications.html" class="nav-link ">publications</a></li>
           <li><a href="cv.html" class="nav-link ">cv</a></li>
-          <li><button id="themeToggle" title="Toggle theme">🌓</button></li>
+          <li><button id="themeToggle" title="Toggle theme">🌞🌙</button></li>
         </ul>
       </div>
     </nav>
@@ -43,7 +45,6 @@
       <section class="post my-5">
         <header class="post-header mb-4">
           <h1 class="post-title"><span class="font-weight-bold">Md Tasnim</span> Jawad</h1>
-          <p class="desc text-muted">Ph.D. student & AI researcher focusing on LLMs, PEFT, and Agentic AI at FIU</p>
         </header>
         <div class="row">
           <div class="col-md-4 order-md-2">
@@ -58,7 +59,7 @@
 
             <p>Recently, I built <strong>EFT-LR</strong>, a framework designed to benchmark <strong>learning-rate policies in PEFT</strong>, and co-authored research exploring <strong>LLM jailbreaking in transportation systems</strong>.</p>
 
-            <p><strong>I’m actively looking for Summer Internship opportunities</strong> focused on <strong>LLM-based systems, applied AI, and machine learning research</strong>.</p>
+            <p class="highlight-red">I’m actively looking for Summer Internship opportunities focused on LLM-based systems, applied AI, and machine learning research.</p>
 
             <p>
               <a href="mailto:mjawa009@fiu.edu">mjawa009@fiu.edu</a> · 
