@@ -8,21 +8,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-  /* --- Dark mode minimal rules --- */
-  body.dark-mode { background:#111; color:#eaeaea; }
-  .navbar { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #e9ecef; }
-  body.dark-mode .navbar { background:#181818; border-bottom-color:#333; }
-  .navbar .brand { font-weight:700; text-decoration:none; color:inherit; }
-  .navbar .nav { list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center; }
-  .navbar .nav a { text-decoration:none; color:inherit; opacity:0.85; }
-  .navbar .nav a.active { opacity:1; font-weight:600; text-decoration:underline; }
-  .navbar button#themeToggle { border:none; background:none; cursor:pointer; font-size:1.05rem; }
-  .timeline { padding-left:0; }
-  .timeline .timeline-item { margin:0 0 1rem 0; }
-  .timeline .timeline-date { font-weight:600; margin-right:.35rem; white-space:nowrap; }
-  .footer { color:#6c757d; }
-  body.dark-mode a { color:#9ec5ff; }
-</style>
+      /* --- Dark mode minimal rules --- */
+      body.dark-mode { background:#111; color:#eaeaea; }
+      .navbar { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid #e9ecef; }
+      body.dark-mode .navbar { background:#181818; border-bottom-color:#333; }
+      .navbar .brand { font-weight:700; text-decoration:none; color:inherit; }
+      .navbar .nav { list-style:none; margin:0; padding:0; display:flex; gap:18px; align-items:center; }
+      .navbar .nav a { text-decoration:none; color:inherit; opacity:0.85; }
+      .navbar .nav a.active { opacity:1; font-weight:600; text-decoration:underline; }
+      .navbar button#themeToggle { border:none; background:none; cursor:pointer; font-size:1.05rem; }
+      .timeline { padding-left:0; }
+      .timeline .timeline-item { margin:0 0 1rem 0; }
+      .timeline .timeline-date { font-weight:600; margin-right:.35rem; white-space:nowrap; }
+      .footer { color:#6c757d; }
+      body.dark-mode a { color:#9ec5ff; }
+    </style>
   </head>
   <body>
 
@@ -43,19 +43,23 @@
       <section class="post my-5">
         <header class="post-header mb-4">
           <h1 class="post-title"><span class="font-weight-bold">Md Tasnim</span> Jawad</h1>
-          <p class="desc text-muted">Ph.D. student & AI researcher focusing on LLMs, PEFT, and generative models at FIU</p>
+          <p class="desc text-muted">Ph.D. student & AI researcher focusing on LLMs, PEFT, and Agentic AI at FIU</p>
         </header>
         <div class="row">
           <div class="col-md-4 order-md-2">
             <figure>
-              <!-- <img src="assets/img/profile.png" alt="Profile picture" class="img-fluid rounded shadow-sm"/> -->
               <img src="assets/img/profile.png" alt="Profile picture" class="profile-pic shadow-sm"/>
             </figure>
-            <!-- <div class="mt-2 small text-muted">AI, LLMs & Generative Models</div> -->
           </div>
           <div class="col-md-8 order-md-1">
-            <p>I’m a Graduate Assistant and Ph.D. student at Florida International University (FIU), working on large language models (LLMs), parameter‑efficient fine‑tuning (PEFT), and LLM agents. I previously developed GSNet—an attention‑based 3D glioma segmentation network—and contributed to open-source benchmarking frameworks.</p>
-            <p>Recently, I built EFT‑LR to benchmark learning‑rate policies for PEFT and co‑authored work on jailbreaking LLMs in transportation systems. I’m passionate about reproducible research and practical, robust AI systems.</p>
+            <p>I’m a <strong>Ph.D. student in Computer Science</strong> at <strong>Florida International University (FIU)</strong>. My research focuses on <strong>Large Language Models (LLMs)</strong>, <strong>Parameter-Efficient Fine-Tuning (PEFT)</strong>, <strong>Agentic AI</strong>, and the <strong>privacy and security aspects</strong> of LLM training.</p>
+
+            <p>My journey into AI began during my undergraduate years, where I developed <strong>GSNet</strong>, an attention-based 3D glioma segmentation network, and contributed to several <strong>open-source benchmarking frameworks</strong> that strengthened my interest in research and reproducibility.</p>
+
+            <p>Recently, I built <strong>EFT-LR</strong>, a framework designed to benchmark <strong>learning-rate policies in PEFT</strong>, and co-authored research exploring <strong>LLM jailbreaking in transportation systems</strong>.</p>
+
+            <p><strong>I’m actively looking for Summer Internship opportunities</strong> focused on <strong>LLM-based systems, applied AI, and machine learning research</strong>.</p>
+
             <p>
               <a href="mailto:mjawa009@fiu.edu">mjawa009@fiu.edu</a> · 
               <a href="https://github.com/006jawad" target="_blank">GitHub</a> · 
@@ -70,7 +74,7 @@
         <ul class="list-unstyled timeline">
           <li class="timeline-item"><span class="timeline-date">Oct 10, 2025</span> Launched this personal website.</li>
           <li class="timeline-item"><span class="timeline-date">Oct, 2025</span> Won the FIU GPSC Travel Award.</li>
-          <li class="timeline-item"><span class="timeline-date">Aug 4, 2025</span> CIKM 2025 acceptance: EFT‑LR (learning‑rate policies for PEFT).</li>
+          <li class="timeline-item"><span class="timeline-date">Aug 4, 2025</span> CIKM 2025 acceptance: EFT-LR (learning-rate policies for PEFT).</li>
         </ul>
       </section>
     </main>
@@ -78,23 +82,23 @@
     <footer class="footer bg-white py-4 mt-5 border-top">
       <div class="container text-center">
         <p class="mb-0 small">
-          &copy; <script>document.write(new Date().getFullYear());</script> Md Tasnim Jawad. Inspired by al‑folio theme.
+          &copy; <script>document.write(new Date().getFullYear());</script> Md Tasnim Jawad. Inspired by al-folio theme.
         </p>
       </div>
     </footer>
 
-<script>
-  // Prefer saved theme else system preference
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  if ((saved === 'dark') || (!saved && prefersDark)) {
-    document.body.classList.add('dark-mode');
-  }
-  document.getElementById('themeToggle')?.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
-  });
-</script>
+    <script>
+      // Prefer saved theme else system preference
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if ((saved === 'dark') || (!saved && prefersDark)) {
+        document.body.classList.add('dark-mode');
+      }
+      document.getElementById('themeToggle')?.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+      });
+    </script>
 
   </body>
 </html>
