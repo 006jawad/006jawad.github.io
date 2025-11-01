@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Academic Portfolio</title>
+
+    <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
     <style>
       /* --- Dark mode minimal rules --- */
       body.dark-mode { background:#111; color:#eaeaea; }
@@ -17,13 +23,24 @@
       .navbar .nav a { text-decoration:none; color:inherit; opacity:0.85; }
       .navbar .nav a.active { opacity:1; font-weight:600; text-decoration:underline; }
       .navbar button#themeToggle { border:none; background:none; cursor:pointer; font-size:1.15rem; }
+
       .timeline { padding-left:0; }
       .timeline .timeline-item { margin:0 0 1rem 0; }
       .timeline .timeline-date { font-weight:600; margin-right:.35rem; white-space:nowrap; }
       .footer { color:#6c757d; }
       body.dark-mode a { color:#9ec5ff; }
+
       /* Highlight red line */
       .highlight-red { color:#d9534f; font-weight:500; }
+
+      /* Profile image */
+      .profile-pic { width:100%; border-radius:12px; }
+
+      /* Contact block under profile */
+      .contact-block { margin-top:12px; }
+      .contact-block .item { display:flex; align-items:center; margin-bottom:8px; }
+      .contact-block .item i { width:22px; text-align:center; margin-right:8px; opacity:0.9; }
+      .contact-block a { text-decoration:none; }
     </style>
   </head>
   <body>
@@ -34,9 +51,13 @@
         <a class="brand" href="index.html">Md Tasnim Jawad</a>
         <ul class="nav">
           <li><a href="index.html" class="nav-link active">about</a></li>
-          <li><a href="publications.html" class="nav-link ">publications</a></li>
-          <li><a href="cv.html" class="nav-link ">cv</a></li>
-          <li><button id="themeToggle" title="Toggle theme">🌞🌙</button></li>
+          <li><a href="publications.html" class="nav-link">publications</a></li>
+          <li><a href="cv.html" class="nav-link">cv</a></li>
+          <li>
+            <button id="themeToggle" title="Toggle theme" aria-label="Toggle theme">
+              <i id="themeIcon" class="fa-solid fa-moon"></i>
+            </button>
+          </li>
         </ul>
       </div>
     </nav>
@@ -44,28 +65,49 @@
     <main class="container mt-5 pt-5">
       <section class="post my-5">
         <header class="post-header mb-4">
-          <h1 class="post-title">Md Tasnim Jawad</h1>
+          <h1 class="post-title">About me</h1>
         </header>
         <div class="row">
+          <!-- Right column first on desktop (image + contacts) -->
           <div class="col-md-4 order-md-2">
             <figure>
               <img src="assets/img/profile.png" alt="Profile picture" class="profile-pic shadow-sm"/>
             </figure>
+
+            <!-- Contact block -->
+            <div class="contact-block">
+              <div class="item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:mjawa009@fiu.edu">mjawa009@fiu.edu</a>
+              </div>
+              <div class="item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Miami, FL</span>
+              </div>
+              <div class="item">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noopener">Google Scholar</a>
+              </div>
+              <div class="item">
+                <i class="fa-brands fa-github"></i>
+                <a href="https://github.com/006jawad" target="_blank" rel="noopener">GitHub</a>
+              </div>
+              <div class="item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/md-jawad006/" target="_blank" rel="noopener">LinkedIn</a>
+              </div>
+            </div>
           </div>
+
+          <!-- Left column (bio) -->
           <div class="col-md-8 order-md-1">
-            <p>I’m a Ph.D. student in Computer Science at Florida International University (FIU). My research focuses on Large Language Models (LLMs), Parameter-Efficient Fine-Tuning (PEFT), Agentic AI, and the privacy and security aspects of LLM training.</p>
+            <p>I’m a Ph.D. student in Computer Science at Florida International University (FIU), under the supervision of <a href="https://yanzhaowu.me/" target="_blank" rel="noopener">Prof. Yanzhao Wu</a>. My research focuses on Large Language Models (LLMs), Parameter-Efficient Fine-Tuning (PEFT), Agentic AI, and the privacy and security aspects of LLM training.</p>
 
             <p>My journey into AI began during my undergraduate years, where I developed GSNet, an attention-based 3D glioma segmentation network, and contributed to several open-source benchmarking frameworks that strengthened my interest in research and reproducibility.</p>
 
             <p>Recently, I built EFT-LR, a framework designed to benchmark learning-rate policies in PEFT, and co-authored research exploring LLM jailbreaking in transportation systems.</p>
 
             <p class="highlight-red">I’m actively looking for Summer Internship opportunities focused on LLM-based systems, applied AI, and machine learning research.</p>
-
-            <p>
-              <a href="mailto:mjawa009@fiu.edu">mjawa009@fiu.edu</a> · 
-              <a href="https://github.com/006jawad" target="_blank">GitHub</a> · 
-              <a href="https://www.linkedin.com/in/md-jawad006/" target="_blank">LinkedIn</a>
-            </p>
           </div>
         </div>
       </section>
@@ -73,9 +115,9 @@
       <section id="news" class="my-5">
         <h2 class="font-weight-bold mb-3">News</h2>
         <ul class="list-unstyled timeline">
+          <li class="timeline-item"><span class="timeline-date">Oct 2025</span> Won the FIU GPSC Travel Award.</li>
+          <li class="timeline-item"><span class="timeline-date">Aug 4, 2025</span> CIKM 2025 acceptance: EFT-LR — EFT-LR: Benchmarking Learning-Rate Policies in Parameter-Efficient Large Language Model Fine-tuning.</li>
           <li class="timeline-item"><span class="timeline-date">Oct 10, 2025</span> Launched this personal website.</li>
-          <li class="timeline-item"><span class="timeline-date">Oct, 2025</span> Won the FIU GPSC Travel Award.</li>
-          <li class="timeline-item"><span class="timeline-date">Aug 4, 2025</span> CIKM 2025 acceptance: EFT-LR (learning-rate policies for PEFT).</li>
         </ul>
       </section>
     </main>
@@ -89,17 +131,26 @@
     </footer>
 
     <script>
-      // Prefer saved theme else system preference
+      // Initialize theme from saved preference or system preference
       const saved = localStorage.getItem('theme');
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      if ((saved === 'dark') || (!saved && prefersDark)) {
-        document.body.classList.add('dark-mode');
-      }
+      const isDark = (saved === 'dark') || (!saved && prefersDark);
+      if (isDark) document.body.classList.add('dark-mode');
+
+      // Set initial icon
+      const themeIcon = document.getElementById('themeIcon');
+      const setIcon = () => {
+        const dark = document.body.classList.contains('dark-mode');
+        themeIcon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+      };
+      setIcon();
+
+      // Toggle handler
       document.getElementById('themeToggle')?.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        setIcon();
       });
     </script>
-
   </body>
 </html>
