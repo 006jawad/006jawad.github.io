@@ -270,10 +270,10 @@ body.dark-mode .timeline { border-left-color:#333; }
 } */
 /* Force a fixed, shorter crop box */
 .avatar-crop {
-  --avatar-y: 5%;            /* 👈 adjust this: 0% = top, 5–15% nudges downward */
+  --avatar-y: 10%;            /* 👈 adjust this: 0% = top, 5–15% nudges downward */
   width: 100%;
   max-width: 320px;
-  height: 240px;             /* controls how tall the visible area is */
+  height: 280px;             /* controls how tall the visible area is */
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
@@ -286,7 +286,7 @@ body.dark-mode .timeline { border-left-color:#333; }
   width: 100%;
   height: 100% !important;   /* override global img height:auto */
   object-fit: cover;         /* crops without distortion */
-  object-position: center var(--avatar-y);  /* 👈 move focal point down by --avatar-y */
+  object-position: center var(--avatar-y);  /* move focal point down by --avatar-y */
   display: block;
 }
 
