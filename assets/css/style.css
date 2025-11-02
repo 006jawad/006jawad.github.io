@@ -214,12 +214,10 @@ body.dark-mode .name-note .pron { color:#bbb; }
 /* ========== Publications page styling ========== */
 .publication-list {
   list-style: none;
-  counter-reset: publication-counter;
   padding-left: 0;
 }
 
 .publication-list li {
-  counter-increment: publication-counter;
   position: relative;
   padding-left: 2.5rem;
   margin-bottom: 1.5rem;
@@ -227,7 +225,6 @@ body.dark-mode .name-note .pron { color:#bbb; }
 }
 
 .publication-list li::before {
-  content: "[" counter(publication-counter) "]";
   position: absolute;
   left: 0;
   font-weight: 600;
@@ -237,6 +234,22 @@ body.dark-mode .name-note .pron { color:#bbb; }
 body.dark-mode .publication-list li::before {
   color: #999;
 }
+
+/* Manual numbering for each publication */
+.publication-list[start="1"] li:nth-child(1)::before { content: "[1]"; }
+.publication-list[start="1"] li:nth-child(2)::before { content: "[2]"; }
+
+.publication-list[start="3"] li:nth-child(1)::before { content: "[3]"; }
+
+.publication-list[start="4"] li:nth-child(1)::before { content: "[4]"; }
+
+.publication-list[start="5"] li:nth-child(1)::before { content: "[5]"; }
+
+.publication-list[start="6"] li:nth-child(1)::before { content: "[6]"; }
+.publication-list[start="6"] li:nth-child(2)::before { content: "[7]"; }
+.publication-list[start="6"] li:nth-child(3)::before { content: "[8]"; }
+.publication-list[start="6"] li:nth-child(4)::before { content: "[9]"; }
+.publication-list[start="6"] li:nth-child(5)::before { content: "[10]"; }
 
 .publication-list li strong {
   font-weight: 500;
