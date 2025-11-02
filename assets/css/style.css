@@ -52,6 +52,12 @@ body {
 .col-md-4 { flex: 0 0 33.333%; max-width: 33.333%; }
 .col-md-8 { flex: 0 0 66.667%; max-width: 66.667%; }
 
+/* Ensure profile column is left-aligned */
+.col-md-4.order-md-2 { text-align: left !important; }
+
+/* Ensure the right column with profile is left-aligned */
+.col-md-4.order-md-2 { text-align: left !important; }
+
 /* Typography / spacing */
 .post-title { font-size: 2rem; margin-bottom: 0.25rem; }
 .desc { font-style: italic; color: #6c757d; }
@@ -156,16 +162,34 @@ body.dark-mode .timeline .timeline-pipe {
 }
 
 /* ========== Name block (Jawad / জাওয়াদ / (jao-oad)) ========== */
-.name-note { margin-top:10px; text-align:left; line-height:1.4; }
-.name-note .english-name { font-size:1.15rem; font-weight:600; color:#333; }
+.name-note { 
+  margin-top:10px; 
+  text-align:left !important; 
+  line-height:1.4; 
+}
+.name-note .english-name { 
+  font-size:1.15rem; 
+  font-weight:600; 
+  color:#333; 
+  text-align:left !important;
+}
 body.dark-mode .name-note .english-name { color:#eee; }
-.name-note .bilingual { font-size:1rem; color:#666; }
+.name-note .bilingual { 
+  font-size:1rem; 
+  color:#666; 
+  text-align:left !important;
+}
 body.dark-mode .name-note .bilingual { color:#ccc; }
-.name-note .pron { font-size:.95rem; color:#777; font-style:italic; }
+.name-note .pron { 
+  font-size:.95rem; 
+  color:#777; 
+  font-style:italic; 
+  text-align:left !important;
+}
 body.dark-mode .name-note .pron { color:#bbb; }
 
 /* ========== Contact block under photo ========== */
-.side-block { margin-top:12px; }
+.side-block { margin-top:12px; text-align:left; }
 .contact-block .item { display:flex; align-items:center; margin-bottom:8px; }
 .contact-block .item i { width:22px; text-align:center; margin-right:8px; opacity:0.9; }
 .contact-block a { text-decoration:none; }
