@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>CV – Jawad</title>
+    <title>CV – Jawad (with PDF Preview)</title>
 
     <!-- Fonts & CSS -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -12,6 +12,39 @@
 
     <!-- Font Awesome (icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    
+    <style>
+      /* PDF Preview styling */
+      .pdf-preview-container {
+        margin: 2rem 0;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      
+      body.dark-mode .pdf-preview-container {
+        border-color: #333;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      }
+      
+      .pdf-preview-container iframe {
+        width: 100%;
+        height: 800px;
+        border: none;
+        display: block;
+      }
+      
+      .pdf-fallback {
+        padding: 2rem;
+        text-align: center;
+        background: #f8f9fa;
+      }
+      
+      body.dark-mode .pdf-fallback {
+        background: #1a1a1a;
+      }
+    </style>
   </head>
   <body>
 
@@ -44,9 +77,77 @@
           </a>
         </p>
 
-        <p class="text-muted">
-          For a complete overview of my education, experience, and skills, please download the PDF above.
-        </p>
+        <!-- PDF Preview -->
+        <div class="pdf-preview-container">
+          <iframe src="assets/cv/resumeLatest.pdf#toolbar=0" title="CV Preview"></iframe>
+          <!-- Fallback for browsers that don't support PDF preview -->
+          <div class="pdf-fallback" style="display:none;">
+            <p>Your browser doesn't support PDF preview.</p>
+            <a class="btn btn-outline-primary" href="assets/cv/resumeLatest.pdf" download>
+              <i class="fa-solid fa-download"></i> Download CV instead
+            </a>
+          </div>
+        </div>
+
+        <hr style="margin: 3rem 0; border-color: #e9ecef;">
+
+        <!-- Education -->
+        <section class="mb-5">
+          <h3 class="section-title">Education</h3>
+          
+          <div class="cv-entry mb-4">
+            <div class="cv-header">
+              <div class="cv-title-line">
+                <strong>Ph.D.</strong>
+                <span class="cv-date">August 2024 - Present</span>
+              </div>
+              <div class="cv-subtitle">Florida International University (FIU) | Miami, FL</div>
+            </div>
+            <div class="cv-details">
+              <div>Major: Computer Science, CGPA: 4.00/4.00</div>
+              <div>Research Interest: LLM, Computer Vision, ML/DL Optimization</div>
+            </div>
+          </div>
+
+          <div class="cv-entry mb-4">
+            <div class="cv-header">
+              <div class="cv-title-line">
+                <strong>B.Sc.</strong>
+                <span class="cv-date">January 2018 - March 2023</span>
+              </div>
+              <div class="cv-subtitle">Khulna University of Engineering and Technology | Khulna, Bangladesh</div>
+            </div>
+            <div class="cv-details">
+              <div>Major: Electrical and Electronic Engineering, CGPA: 3.24/4.00</div>
+              <div>Thesis: GSNet: A Multi-class 3D Attention-based Hybrid Glioma Segmentation Network</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="mb-5">
+          <h3 class="section-title">Skills</h3>
+          <div class="cv-skills">
+            <div class="skill-item mb-3">
+              <strong>Programming Languages:</strong> Proficient in Python (primary language), with experience in C and C++. Working knowledge of SQL, HTML, CSS, and JavaScript.
+            </div>
+            <div class="skill-item mb-3">
+              <strong>Frameworks and Libraries:</strong> Expertise in Hugging Face Transformers and PyTorch, with extensive hands-on experience in tools and libraries for deep learning, machine learning, computer vision, data preprocessing, and model evaluation.
+            </div>
+            <div class="skill-item mb-3">
+              <strong>Productivity Tools:</strong> MS Excel, Word, PowerPoint.
+            </div>
+          </div>
+        </section>
+
+        <!-- Languages -->
+        <section class="mb-5">
+          <h3 class="section-title">Languages</h3>
+          <ul class="cv-list">
+            <li><strong>English</strong> – Fluent</li>
+            <li><strong>Bengali</strong> – Native</li>
+          </ul>
+        </section>
       </section>
     </main>
 
