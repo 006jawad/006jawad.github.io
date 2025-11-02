@@ -156,7 +156,7 @@ body.dark-mode .timeline .timeline-pipe {
 }
 
 /* ========== Name block (Jawad / জাওয়াদ / (jao-oad)) ========== */
-.name-note { margin-top:10px; text-align:center; line-height:1.4; }
+.name-note { margin-top:10px; text-align:left; line-height:1.4; }
 .name-note .english-name { font-size:1.15rem; font-weight:600; color:#333; }
 body.dark-mode .name-note .english-name { color:#eee; }
 .name-note .bilingual { font-size:1rem; color:#666; }
