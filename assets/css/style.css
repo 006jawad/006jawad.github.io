@@ -257,6 +257,14 @@ body.dark-mode .timeline { border-left-color:#333; }
 .timeline .timeline-item { margin:0 0 12px 0; }
 .timeline .timeline-date { font-weight:600; margin-right:.35rem; white-space:nowrap; }
 
+/* Remove any extra horizontal ticks/lines from the theme */
+.timeline .timeline-item::before,
+.timeline .timeline-item::after {
+  content: none !important;
+  border: 0 !important;
+}
+
+
 /* ===== Internship red line ===== */
 .highlight-red { color:#d9534f; font-weight:500; }
 
